@@ -1,0 +1,28 @@
+# we will make this file shared by prettier|eslint|oxlint
+**/node_modules
+.yarn
+.github/helm
+.vscode
+.yarnrc.yml
+.docker
+**/.storybook
+pnpm-lock
+pnpm-workspace
+
+# compiled output
+.coverage
+.nx/**
+target
+test-results
+**/dist
+**/lib
+**/storybook-static
+**/web-static
+**/public
+**/e2e-dist-*
+**/static
+
+# generated files
+**/*.gen.ts
+**/*.gql
+**/*.d.ts
