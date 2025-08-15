@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloud_db/components": "workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm run --filter @cloud_db/web dev",
+    "dev:e": "pnpm run --filter @cloud_db/electron dev",
     "format": "prettier --write 'packages/**/**/*.{ts,tsx,js,mjs,jsx,json,css,scss,md,html}'"
   },
   "pnpm": {
@@ -24,5 +26,11 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript-eslint": "^8.24.1"
+  },
+  "dependencies": {
+    "@cloud_db/components": "workspace:*",
+    "@tailwindcss/vite": "^4.1.12",
+    "@vitejs/plugin-react": "catalog:",
+    "vite": "catalog:"
   }
 }
