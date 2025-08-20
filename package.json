@@ -19,6 +19,8 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.6.2",
+    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+    "@upstash/context7-mcp": "^1.0.15",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
