@@ -1,0 +1,14 @@
+{
+  "tailwindCSS.classFunctions": ["cva", "cx"],
+  "python.defaultInterpreterPath": "${workspaceFolder}/packages/backend/app/.venv/bin/python",  // macOS/Linux
+  // "python.defaultInterpreterPath": "${workspaceFolder}\\packages\\backend\\app\\.venv\\Scripts\\python.exe", // Windows
+
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+
+  // 让 Pylance 知道代码路径
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/packages/backend/app/src"
+  ]
+}
