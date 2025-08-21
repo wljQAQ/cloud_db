@@ -16,7 +16,6 @@ init_exception_handlers(app)
 
 # 初始化API路由
 init_api(app)
-
 # 启动服务
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=3000, reload=True, log_level="info")
