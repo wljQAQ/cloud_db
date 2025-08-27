@@ -8,3 +8,4 @@ class DBConnect(BaseModel):
     port: int
     username: str
     password: str
+    database: str

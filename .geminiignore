@@ -62,3 +62,4 @@ logs/
 __pycache__/
 *.so
 .Python
+.env
