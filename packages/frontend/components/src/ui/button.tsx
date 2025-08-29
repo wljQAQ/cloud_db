@@ -33,7 +33,7 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps extends Omit<React.ComponentProps<'button'>, keyof MotionProps>, VariantProps<typeof buttonVariants> {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 function Button({ className, variant, size, ref, ...props }: ButtonProps) {
