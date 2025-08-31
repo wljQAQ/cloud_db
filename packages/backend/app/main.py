@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from api import init_api
 from core.middleware import add_process_time_header
 from core.exception_handler import init_exception_handlers
+from core.config import settings
 
 # 实例化FastAPI应用
 app = FastAPI()

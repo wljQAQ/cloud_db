@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends
 from core.response import UnifiedResponseModel
 from schemas.database_schema import DBConnect
 from services.database_service import DatabaseService, database_service
+from core.config import settings
 
 router = APIRouter(prefix="/db", tags=["数据库"])
 
@@ -29,6 +30,9 @@ async def connect_test(
     - **成功**: 返回标准的成功响应体。
     - **失败**: 全局异常处理器会自动捕获 BusinessException，并返回标准的错误响应体。
     """
+
+    print(settings)
+
     await db_service.connect_test(connect_params)
 
     # 如果上面的调用没有抛出异常，则代表连接成功

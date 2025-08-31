@@ -15,9 +15,17 @@
         "--reload"
       ],
       "cwd": "${workspaceFolder}/packages/backend/app",
-      "python": "${workspaceFolder}/packages/backend/app/.venv/bin/python",
       "console": "integratedTerminal",
-      "justMyCode": true
+      "justMyCode": true,
+      "osx": {
+        "python": "${workspaceFolder}/packages/backend/app/.venv/bin/python"
+      },
+      "linux": {
+        "python": "${workspaceFolder}/packages/backend/app/.venv/bin/python"
+      },
+      "windows": {
+        "python": "${workspaceFolder}\\packages\\backend\\app\\.venv\\Scripts\\python.exe"
+      }
     }
   ]
 }
