@@ -7,6 +7,7 @@ client = OpenAI(
     api_key=settings.open_router_deepseek_api_key,
 )
 
+# https://github.com/openai/openai-agents-python/blob/main/src/agents/models/openai_chatcompletions.py#L333
 
 tools = [
     # {

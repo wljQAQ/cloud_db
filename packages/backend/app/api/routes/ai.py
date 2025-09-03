@@ -23,8 +23,7 @@ def chat():
 
     print(settings.open_router_base_url, settings.open_router_deepseek_api_key)
 
-
-    response = client.chat.completions.create(
+    stream = client.chat.completions.create(
         model="deepseek/deepseek-chat-v3.1:free",
         messages=input_list,
         tools=[
@@ -48,8 +47,29 @@ def chat():
             }
         ],
         tool_choice="auto",
+        stream=True,
     )
 
-    print(response)
+    res = {}
 
-    return response
+    idx = 1
+
+    tool_calls = {}
+
+    for chunk in stream:
+        res[idx] = chunk
+        idx += 1
+
+        for tool_call in chunk.choices[0].delta.tool_calls or []:
+            index = tool_call.index
+            if index not in tool_calls:
+                tool_calls[index] = tool_call
+
+            tool_calls[index].function.arguments += tool_call.function.arguments
+
+        print(chunk)
+
+    return {
+        "res": res,
+        "tool_calls": tool_calls,
+    }
